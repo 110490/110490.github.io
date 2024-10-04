@@ -5,8 +5,7 @@ var randomColor = Math.floor(Math.random()*16777215).toString(16);
 let x = -100, y = -100, dx = 10, dy = 10, r = 30, aa = 0 ;
 
 const setBg = () => {
-  
-  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  let randomColor = Math.floor(Math.random()*16777215).toString(16);
   color = "#" + randomColor;
 }
 document.addEventListener("mousedown", setBg);
