@@ -4,6 +4,15 @@ let ctx = canvas.getContext("2d");
 var randomColor = Math.floor(Math.random()*16777215).toString(16);
 let x = -100, y = -100, dx = 10, dy = 10, r = 30, aa = 0 ;
 
+const setBg = () => {
+  
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  color = "#" + randomColor;
+}
+document.addEventListener("mousedown", setBg);
+setBg();
+
+
 
 // 按下按鍵時觸發
 document.addEventListener("mousemove", mousemove);
@@ -27,16 +36,6 @@ function mouseup()
 	aa = 0;
 }
 
-  if(aa==1)
-  {  
-  const randomColor = Math.floor(Math.random()*16777215).toString(16);
-  color = "#" + randomColor;
-  }
-  else 
-  {
-	  color = "#";
-	}
-  
 
 // TODO: 滑鼠移動(mousemove)時觸發，改變位置(x, y)為滑鼠目前位置(e.clientX, e.clientY)
 // ...
